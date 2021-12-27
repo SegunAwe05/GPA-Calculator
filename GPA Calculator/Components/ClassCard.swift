@@ -11,7 +11,7 @@ struct ClassCard: View {
     @Environment(\.colorScheme) var colorScheme
     var name: String
     var grade: String
-    var credit: Int
+    var credit: Int16
     
     var body: some View {
         VStack {
