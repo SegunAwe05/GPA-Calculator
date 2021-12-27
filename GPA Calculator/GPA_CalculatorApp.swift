@@ -11,7 +11,7 @@ import SwiftUI
 struct GPA_CalculatorApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HomeView()
         }
     }
 }
