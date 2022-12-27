@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5088836C295BB0910029198B /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5088836B295BB0910029198B /* SearchBar.swift */; };
 		50AF0AE5277804E9005EF0C0 /* GPA_CalculatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AF0AE4277804E9005EF0C0 /* GPA_CalculatorApp.swift */; };
 		50AF0AE927780500005EF0C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50AF0AE827780500005EF0C0 /* Assets.xcassets */; };
 		50AF0AEC27780500005EF0C0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50AF0AEB27780500005EF0C0 /* Preview Assets.xcassets */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5088836B295BB0910029198B /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		50AF0AE1277804E9005EF0C0 /* GPA Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GPA Calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		50AF0AE4277804E9005EF0C0 /* GPA_CalculatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPA_CalculatorApp.swift; sourceTree = "<group>"; };
 		50AF0AE827780500005EF0C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 			children = (
 				50AF0AF22778DE4B005EF0C0 /* HomeView.swift */,
 				50C0F86527797DBE00FC0CDC /* AddView.swift */,
+				5088836B295BB0910029198B /* SearchBar.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -196,6 +199,7 @@
 				50C0F8642779489D00FC0CDC /* ClassCard.swift in Sources */,
 				50C0F85D27792E6C00FC0CDC /* ClassModel.swift in Sources */,
 				50C0F85F27792ECE00FC0CDC /* classViewModel.swift in Sources */,
+				5088836C295BB0910029198B /* SearchBar.swift in Sources */,
 				50AF0AE5277804E9005EF0C0 /* GPA_CalculatorApp.swift in Sources */,
 				50AF0AF32778DE4B005EF0C0 /* HomeView.swift in Sources */,
 				50C0F86227793F3A00FC0CDC /* shawdows.swift in Sources */,

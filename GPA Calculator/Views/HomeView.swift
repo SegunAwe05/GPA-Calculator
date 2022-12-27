@@ -10,6 +10,11 @@ import SwiftUI
 struct HomeView: View {
     @StateObject var vm = classViewModel()
     @State var addButton = false
+    @State var searchText = ""
+    
+    func dismissKey() {
+           UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+       }
     
     var body: some View {
         NavigationView {
@@ -31,20 +36,24 @@ struct HomeView: View {
                         .font(.subheadline)
                         .padding(.trailing, 247)
                     Divider()
+                    SearchBar(text: $searchText)
+                        .padding(7)
                     List {
-                        ForEach(vm.savedClasses) { value in
+                        ForEach(vm.savedClasses.filter({($0.courseName?.localizedCaseInsensitiveContains(searchText))! || searchText.isEmpty })) { value in
                             ClassCard(name: value.courseName ?? "NA", grade: value.classGrade ?? "NA", credit: value.classCredits)
                         }.onDelete(perform: vm.listSwipeDelete)
                         .listRowBackground(Color("Phoric"))
                             .listRowSeparator(.hidden)
                             
                     }.listStyle(PlainListStyle())
+                    
                         
                     
                     
                     Spacer()
                         
                 }.padding(.top, 20)
+
                     
                 
                 // the button
@@ -59,20 +68,23 @@ struct HomeView: View {
                                 .foregroundColor(Color("Phoric"))
                                 .font(.system(size: 35))
                         }.padding(8)
-                        .background(Color.primary)
-                        .clipShape(Circle())
+                            .background(Color.primary)
+                            .clipShape(Circle())
                     }.padding(.trailing, 25)
                 }.padding(.bottom, 20)
-                    
                 
-                .sheet(isPresented: $addButton, content: {
-                    AddView(vm: vm)
+                
+                    .sheet(isPresented: $addButton, content: {
+                        AddView(vm: vm)
                     })
-                                
+                
             }.navigationBarTitle("")
                 .navigationBarHidden(true)
                 .onAppear {
                     vm.calculateGPA()
+                }
+                .onTapGesture {
+                    dismissKey()
                 }
         }
     }

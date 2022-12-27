@@ -74,7 +74,7 @@ class classViewModel: ObservableObject {
             let entity = savedClasses[index]
             container.viewContext.delete(entity)
             saveData()
-        calculateGPA()
+            calculateGPA()
         }
    
     
