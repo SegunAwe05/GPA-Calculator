@@ -42,19 +42,16 @@ struct HomeView: View {
                         ForEach(vm.savedClasses.filter({($0.courseName?.localizedCaseInsensitiveContains(searchText))! || searchText.isEmpty })) { value in
                             ClassCard(name: value.courseName ?? "NA", grade: value.classGrade ?? "NA", credit: value.classCredits)
                         }.onDelete(perform: vm.listSwipeDelete)
-                        .listRowBackground(Color("Phoric"))
+                            .listRowBackground(Color("Phoric"))
                             .listRowSeparator(.hidden)
-                            
-                    }.listStyle(PlainListStyle())
-                    
                         
-                    
+                    }
+                    .scrollContentBackground(.hidden)
+                    .scrollIndicators(.hidden)
                     
                     Spacer()
                         
                 }.padding(.top, 20)
-
-                    
                 
                 // the button
                 VStack{
